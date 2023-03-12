@@ -1,0 +1,77 @@
+.container {
+  padding-top: 15vh;
+}
+
+.cssBayan__wrap {
+  color: #1bc54e;
+  transition: .5s;
+}
+
+.cssBayan__wrap:hover {
+  color: rgba(43, 47, 54, 1);
+}
+
+.cssBayan h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.cssBayan__item {
+  position: relative;
+}
+
+.cssBayan__item label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  cursor: pointer;
+}
+.cssBayan__item-label {
+  border-top: 2px solid #ccc;
+}
+.cssBayan__item-label:last-child {
+  border-bottom: 2px solid #ccc;
+}
+.cssBayan__item input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.close {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  transform: rotate(45deg);
+  transition: .5s;
+}
+.cssBayan__item-content img {
+  width: 50rem;
+  height: 0rem;
+  object-fit: cover;
+  margin: 0 auto;
+  transition: .7s;
+}
+
+.cssBayan__item:hover .cssBayan__item-content img{
+  height: 70rem;
+}
+
+.cssBayan__item:hover .cssBayan__item-content {
+  padding: 6rem 2rem;
+}
+
+.cssBayan__item:hover .close {
+  transform: rotate(0deg);
+}
+.cssBayan__item input[type=radio]:checked ~ .cssBayan__item-content {
+  padding: 6rem 2rem;
+}
+.cssBayan__item input[type=radio]:checked ~ .cssBayan__item-content img {
+  height: 70rem;
+}
+.cssBayan__item input[type=radio]:checked ~ .cssBayan__item-label .close {
+  transform: rotate(0deg);
+}
+
