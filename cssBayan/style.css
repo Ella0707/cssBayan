@@ -1,0 +1,121 @@
+.container {
+  padding-top: 15vh;
+}
+
+.cssBayan__wrap {
+  color: #1bc54e;
+  transition: .5s;
+}
+
+.cssBayan__wrap .close {
+  fill: #1bc54e;
+}
+
+@media (hover: hover) {
+  .cssBayan__wrap:hover {
+    color: rgba(43, 47, 54, 1);
+  }
+
+  .cssBayan__wrap:hover svg {
+    fill: rgba(43, 47, 54, 1);
+  }
+
+  .cssBayan__item {
+    cursor: pointer;
+  }
+}
+
+.cssBayan h1 {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.cssBayan__item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+
+.cssBayan__item-title h2 {
+  font-size: 4.5rem;
+  padding-right: 3rem;
+}
+
+.cssBayan__item-title {
+  border-top: 2px solid #ccc;
+}
+
+.cssBayan__item-title:last-child {
+  border-bottom: 2px solid #ccc;
+}
+
+.cssBayan__item input {
+  opacity: 0;
+}
+
+.close {
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: contain;
+  transform: rotate(45deg);
+  transition: .5s;
+  flex-shrink: 0;
+}
+
+.cssBayan__item-content img {
+  width: 50rem;
+  height: 0rem;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: .7s;
+}
+
+.cssBayan__item:hover .cssBayan__item-content img {
+  height: 50rem;
+}
+
+.cssBayan__item:hover .cssBayan__item-content {
+  padding: 6rem 2rem;
+}
+
+.cssBayan__item:hover .close {
+  transform: rotate(0deg);
+  fill: rgba(43, 47, 54, 1);
+}
+
+.cssBayan__item input[type=radio]:checked~.cssBayan__item-title {
+  color: rgba(43, 47, 54, 1);
+}
+
+.cssBayan__item input[type=radio]:checked~.cssBayan__item-content {
+  padding: 6rem 2rem;
+}
+
+.cssBayan__item input[type=radio]:checked~.cssBayan__item-content img {
+  height: 70rem;
+}
+
+.cssBayan__item input[type=radio]:checked~.cssBayan__item-title .close {
+  transform: rotate(0deg);
+  fill: rgba(43, 47, 54, 1);
+}
+
+.cssBayan__item input[type=radio]:active~.cssBayan__item-title {
+  color: #1bc54e;
+}
+
+
+
+@media (max-width: 48em) {
+  .cssBayan h1 {
+    font-size: 8rem;
+    margin-bottom: 5rem;
+  }
+
+  .cssBayan__item-title h2 {
+    font-size: 4rem;
+  }
+}
